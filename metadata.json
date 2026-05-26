@@ -1,0 +1,6 @@
+{
+  "name": "Telemetry Pinger",
+  "description": "A lightweight background network prober daemon that reads a hosts.yaml configuration file, continuously tracks server response times, latencies, and HTTP status codes, fires alerts to webhooks, and generates a standalone static HTML Status Page.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

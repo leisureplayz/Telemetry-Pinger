@@ -1,0 +1,30 @@
+# Telemetry Pinger Configuration
+# This file is monitored and readable/writable by the telemetry prober daemon.
+
+config:
+  interval_seconds: 10
+  timeout_seconds: 5
+  webhook:
+    enabled: false
+    url: ""
+    alert_on_status_change: true
+    alert_on_latency_spike: true
+    latency_threshold_ms: 800
+
+hosts:
+  - id: google
+    name: Google Core Services
+    url: https://www.google.com
+    expected_status: 200
+  - id: github
+    name: GitHub Platform
+    url: https://github.com
+    expected_status: 200
+  - id: cloudflare
+    name: Cloudflare DNS
+    url: https://1.1.1.1
+    expected_status: 200
+  - id: httpbin
+    name: HTTP Test Endpoint
+    url: https://httpbin.org/get
+    expected_status: 200
